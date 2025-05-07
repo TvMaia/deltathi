@@ -3,12 +3,12 @@ import tensorflow as tf
 from tensorflow import keras
 from collections import deque
 import random
-from deltathi_api import DeltathiAPI  # Importando a classe do simulador
+from deltathi_api import DeltathiAPI  # Importando os deltas da API de trade
 
 # Configurações
 MAX_DELTAS = 20
 STATE_SIZE = MAX_DELTAS + 1  # Deltas + pontuação
-ACTION_SIZE = 3  # Subir, descer, finalizar
+ACTION_SIZE = 3  # Subir (buy), descer(sell), finalizar (take profit)
 EPISODES = 1000
 BATCH_SIZE = 32
 GAMMA = 0.95  # Fator de desconto
